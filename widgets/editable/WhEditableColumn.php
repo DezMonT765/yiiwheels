@@ -16,6 +16,7 @@
  */
 
 Yii::import('yiiwheels.widgets.editable.WhEditableField');
+Yii::import('yiiwheels.widgets.editable.WhEditable');
 Yii::import('zii.widgets.grid.CDataColumn');
 
 class WhEditableColumn extends CDataColumn
