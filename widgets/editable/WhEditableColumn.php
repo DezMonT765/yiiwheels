@@ -110,10 +110,10 @@ class WhEditableColumn extends CDataColumn
 	 */
 	protected function renderHeaderCellContent()
 	{
-		if (yii::app()->editable->form != EditableConfig::FORM_BOOTSTRAP) {
+		/*if (yii::app()->editable->form != EditableConfig::FORM_BOOTSTRAP) {
 			parent::renderHeaderCellContent();
 			return;
-		}
+		}*/
 
 		if ($this->grid->enableSorting && $this->sortable && $this->name !== null) {
 			$sort = $this->grid->dataProvider->getSort();
