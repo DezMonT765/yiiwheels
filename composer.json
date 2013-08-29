@@ -18,7 +18,7 @@
 		}
 	],
 	"require": {
-        "Crisu83/yiistrap": "1.0.1"
+        "crisu83/yiistrap": "1.0.1"
 	},
 	"repositories": [
 		{
