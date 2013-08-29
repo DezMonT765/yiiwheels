@@ -18,8 +18,14 @@
 		}
 	],
 	"require": {
-        "2amigos/yiistrap": "1.0.1"
+        "Crisu83/yiistrap": "1.0.1"
 	},
+	"repositories": [
+		{
+		    "type": "git",
+		    "url": "https://github.com/Crisu83/yiistrap.git"
+		}
+	],
     "require-dev": {
         "php": ">=5.3.0",
         "yiisoft/yii": "1.1.13"
