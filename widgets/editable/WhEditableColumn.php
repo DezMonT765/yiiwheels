@@ -139,7 +139,7 @@ class WhEditableColumn extends CDataColumn
 	 */
 	public function renderFilterCell()
 	{
-		if(Yii:app()->editable)
+		if(Yii::app()->editable)
 		{
 			if (yii::app()->editable->form != EditableConfig::FORM_BOOTSTRAP) {
 				parent::renderFilterCell();
