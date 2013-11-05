@@ -34,6 +34,14 @@ class WhEditable extends CWidget
 	 * @see x-editable
 	 */
 	public $pk = null;
+	
+	/**
+
+    * @var array additional data to send to server via get to source url requets
+
+    */
+
+    public $additional_data=null;
 
 	/**
 	 * @var string name of field
@@ -335,12 +343,28 @@ class WhEditable extends CWidget
 			'href' => '#',
 			'rel' => $this->liveSelector ? $this->liveSelector : $this->getSelector(),
 		);
-
+	
 		//set data-pk
 		if ($this->pk !== null) {
 			$htmlOptions['data-pk'] = is_array($this->pk) ? CJSON::encode($this->pk) : $this->pk;
 		}
+	
+			 // set additional_data
 
+        if($this->additional_data && is_array($this->additional_data))
+
+        {
+
+           foreach($this->additional_data as $data_key => $data_value)    
+
+            {
+
+                $htmlOptions['data-'.$data_key] = is_array($data_value) ? CJSON::encode($data_value) : $data_value;
+
+            }
+
+        }
+	
 		//if input type assumes autotext (e.g. select) we define value directly in data-value
 		//and do not fill element contents
 		if ($this->_prepareToAutotext) {
